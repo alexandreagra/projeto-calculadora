@@ -1,43 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">    
-    <title>Free Calculator!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilo.css"> 
+    <title>Calculadora JS!</title>
 </head>
 <body>
 
+    <h1 class="titulo"><div class="titulo-cor">My</div> Calculator</h1>
+
     <div id="calculadora">
-        
+
            <div class="painel">
                 <div data-previous-operand class="previous"></div>
-                <div data-current-operand class="current"></div>
+                <div data-current-operand class="current">0</div>
            </div>
-                <button data-all-clear>C</button>
-                <button data-operation>%</button>
-                <button data-delete>DEL</button>
-                <button data-operation>÷</button>
-                <button data-number>1</button>
+                <button data-all-clear class="resetar">AC</button>
+                <button data-delete class="delete">DEL</button>
+                <button data-operation class="porcentagem">%</button>
+                <button data-operation class="divisao">÷</button>
+                <button data-number class="um">1</button>
                 <button data-number>2</button>
                 <button data-number>3</button>
-                <button data-operation>*</button>
-                <button data-number>4</button>
+                <button data-operation class="multiplicacao">*</button>
+                <button data-number class="quatro">4</button>
                 <button data-number>5</button>
                 <button data-number>6</button>
-                <button data-operation>+</button>
-                <button data-number>7</button>
+                <button data-operation class="soma">+</button>
+                <button data-number class="sete">7</button>
                 <button data-number>8</button>
                 <button data-number>9</button>
-                <button data-operation>-</button>
-                <button data-number>.</button>
-                <button data-number>0</button>
-                <button data-equals class="duplo">=</button>
+                <button data-operation class="subtracao">-</button>
+                <button data-number class="ponto">.</button>
+                <button data-number class="zero">0</button>
+                <button data-number class="zero-plus">00</button>
+                <button data-equals class="igual">=</button>
     </div>
+
     
     <script src="main.js"></script>
 </body>

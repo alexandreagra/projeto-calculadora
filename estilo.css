@@ -1,39 +1,113 @@
 * {
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto Mono', monospace;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #42f5d7, #89b0ddcb);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgb(209, 228, 241) 0%, rgba(136, 203, 218, 0.685) 100%);
+}
+
+.titulo {
+    font-size: 60px;
+    gap: 8px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+}
+
+.titulo-cor {
+    color: rgba(248, 252, 48, 0.712);
 }
 
 #calculadora {
     display: grid;
     justify-content: center;
     align-content: center;
-    min-height: 100vh;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    max-width: 100vw;
 }
 
 #calculadora > button {
     cursor: pointer;
-    font-size: 1.4rem;
+    font-size: 24px;
     border: 1px solid white;
     outline: none;
-    background: rgba(255, 255, 255, .5)
+    background: rgba(215, 255, 252, 0.507);
+    border-radius: 4px 4px 4px 4px;
+    font-weight: 300;
 }
 
 
 #calculadora > button:hover {
-    background-color: rgba(255, 255, 255, .9);
+    background-color: #99d3e094 !important;
 }
 
-.duplo {
-    grid-column: span 2;
+/* BOTÕES COLORIDOS */
+
+.resetar {
+    background-color: rgba(255, 252, 64, 0.63) !important;
+    border-radius: 0px 0px 4px 0px !important;
 }
+
+.igual {
+    grid-column: span 1;
+    background-color: rgba(255, 252, 64, 0.63) !important;
+    border-radius: 4px 0px 8px 0px !important;
+}
+
+.porcentagem {
+    background-color: rgba(21, 255, 0, 0.363)!important;
+    border-radius: 0px 0px 4px 4px !important;
+}
+
+.delete {
+    background-color: rgba(255, 154, 154, 0.836)!important;
+    border-radius: 0px 0px 4px 4px !important;
+}
+
+.multiplicacao {
+    background-color: rgba(21, 255, 0, 0.363)!important;
+    border-radius: 4px 0px 0px 4px !important;
+}
+
+.subtracao {
+    background-color: rgba(21, 255, 0, 0.363)!important;
+    border-radius: 4px 0px 0px 4px !important;
+}
+
+.soma {
+    background-color: rgba(21, 255, 0, 0.363)!important;
+    border-radius: 4px 0px 0px 4px !important;
+}
+
+.um, .quatro, .sete {
+    border-radius: 0px 4px 4px 0px !important;
+}
+
+.divisao {
+    background-color: rgba(21, 255, 0, 0.363)!important;
+    border-radius: 0px 0px 0px 4px !important;
+}
+
+.ponto {
+    background-color: rgba(21, 255, 0, 0.363)!important;
+    border-radius: 0px 4px 0px 8px !important;
+}
+
+.zero {
+    border-radius: 4px 4px 0px 0px !important;
+}
+
+.zero-plus {
+    border-radius: 4px 4px 0px 0px !important;
+}
+
+
 
 .painel {
     grid-column: 1 / -1;
@@ -45,6 +119,9 @@ body {
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
+    background: rgba(143, 255, 248, 0.301);
+    border-radius: 8px 8px 0px 0px;
+    border: 1px solid white;
 }
 
 .painel .previous {
@@ -55,4 +132,14 @@ body {
 .painel .current {
     color: black;
     font-size: 3.2rem;
+}
+
+@media  (min-width: 360px) and (max-width: 800px){
+    .titulo, .titulo-cor {
+        font-size: 40px
+    }
+
+    #calculadora {
+        grid-template-columns: repeat(4, 88px);
+    }
 }
